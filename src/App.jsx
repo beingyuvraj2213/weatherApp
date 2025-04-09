@@ -78,6 +78,7 @@ const App = () => {
           : "app-light min-h-screen px-4 py-10 flex flex-col items-center"
       }
     >
+      {/* Framer motion is applied here */}
       <motion.h1
         className="text-4xl font-bold mb-4 text-center"
         style={{ color: isDarkMode ? "#e0e7ff" : "#3730a3" }}
@@ -85,13 +86,15 @@ const App = () => {
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
       >
-        🌦️ Weather Dashboard
+        🌦️ My Weather App
       </motion.h1>
+
 
       <button className="toggle-btn" onClick={() => setIsDarkMode(!isDarkMode)}>
         {isDarkMode ? "☀️ Switch to Light Mode" : "🌙 Switch to Dark Mode"}
       </button>
 
+      {/* Showing 5 recent searches over here, stored these using localhost in user storage only */}
       <RecentSearches
         recentSearches={recentSearches}
         setCity={setCity}
@@ -103,6 +106,7 @@ const App = () => {
       {loading && (
         <p className="mt-6 text-lg animate-pulse">Fetching weather...</p>
       )}
+      {/* Showing the error message over here */}
       {error && <p className="mt-6 text-red-500 font-semibold">{error}</p>}
 
       {weather && !loading && !error && (
