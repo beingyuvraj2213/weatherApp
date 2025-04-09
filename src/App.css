@@ -1,0 +1,32 @@
+@import "tailwindcss";
+/* styles.css */
+/* body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  } */
+  
+  .app-light {
+    background: linear-gradient(to bottom right, #dbeafe, #c7d2fe);
+    color: #1e3a8a;
+  }
+  
+  .app-dark {
+    background: linear-gradient(to bottom right, #1e293b, #0f172a);
+    color: #f1f5f9;
+  }
+  
+  .toggle-btn {
+    padding: 8px 16px;
+    background-color: #4f46e5;
+    border: none;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+  }
+  
+  .toggle-btn:hover {
+    background-color: #4338ca;
+  }
+  
